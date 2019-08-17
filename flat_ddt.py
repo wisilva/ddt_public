@@ -4,7 +4,7 @@ import torch
 import numpy as np
 
 """
-In this variation on the original flat ddt, an attention linear layer will be added  
+In this variation on the original flat ddt, an attention linear layer will be added in place of the selector
 """
 class FlatDDT(nn.Module):
     def __init__(self,
