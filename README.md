@@ -11,7 +11,7 @@ There are a few hyperparameters that must be set for each instantiation of a DDT
 
 * `input_dim`: int, number of input features
 * `output_size`: int, number of possible labels
-* leaves: int, number of leaves. This determines the depth of the tree. Must be 2^n, where n is the depth
+* `leaves`: int, number of leaves. This determines the depth of the tree. Must be 2^n, where n is the depth
 * `alpha`: float, temperature value. This determines confidence of the model at decision nodes.
 * `train_alpha`: Boolean flag. This determines whether alpha is made a parameter of the model.
 * `use_gpu`: Boolean flag. This determines whether the model runs on the GPU. In order to use, input data must be placed on a GPU.
