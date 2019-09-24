@@ -11,12 +11,14 @@ There are a few hyperparameters that must be set for each instantiation of a DDT
 
 * `input_dim`: int, number of input features
 * `output_size`: int, number of possible labels
+* `nodes`: Because this model can currently only be randomly initialized, set this to 'None'. Nodes will be initialized based on the depth.
 * `leaves`: int, number of leaves. This determines the depth of the tree. Must be 2^n, where n is the depth
 * `alpha`: float, temperature value. This determines confidence of the model at decision nodes.
 * `train_alpha`: Boolean flag. This determines whether alpha is made a parameter of the model.
 * `use_gpu`: Boolean flag. This determines whether the model runs on the GPU. In order to use, input data must be placed on a GPU.
 * `vectorized`: Boolean flag. If true, comparators of probability nodes are vectorized with output determined by attention layer
 * `is_value`: Boolean flag. If false, runs output through softmax before returning it.
+  
 
 For a 30 dimension input with 2 output classes, a static alpha = 1.0, a vectorized DDT that doesn't softmax output, on the GPU, a Deep DDT model would be created like so:
 
