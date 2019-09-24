@@ -23,7 +23,7 @@ There are a few hyperparameters that must be set for each instantiation of a DDT
 For a 30 dimension input with 2 output classes, a static alpha = 1.0, a vectorized DDT that doesn't softmax output, on the GPU, a Deep DDT model would be created like so:
 
 ```
-net = DeepDDT(input_dim=30, leaves=16, output_dim=2, alpha=1.0, use_gpu=True, is_value=True, vectorized=True, train_alpha=False)
+net = DeepDDT(input_dim=30, nodes=None, leaves=16, output_dim=2, alpha=1.0, use_gpu=True, is_value=True, vectorized=True, train_alpha=False)
 ```
 
 And to get a prediction from the network, as in any other `nn.Module` in PyTorch, simply create your input_data tensor and run:
